@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Rectangular Boxes</title>
+<style>
+  .container {
+    width: 21cm; /* A4 width */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 4in;
+    height: 6in;
+    border: 2px solid #000;
+    overflow: hidden;
+  }
+  .rotated-text {
+    transform: rotate(90deg); /* Rotate text by 90 degrees */
+    white-space:wrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    margin: 10; /* Reset default margin */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <p class="rotated-text">Box 2: This is some text inside the rectangular box.</p>
+    </div>
+    <div class="box">
+      <p class="rotated-text">Box 2: This is some text inside the rectangular box.</p>
+    </div>
+    <div class="box">
+      <p class="rotated-text">Box 3: This is some text inside the rectangular box.</p>
+    </div>
+    <div class="box">
+      <p class="rotated-text">Box 4: This is some text inside the rectangular box.</p>
+    </div>
+  </div>
+</body>
+</html>
