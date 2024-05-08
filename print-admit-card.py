@@ -1,6 +1,13 @@
 import csv
+import sys
+# Check if the CSV file path is provided as an argument
+if len(sys.argv) < 2:
+    print("Error: CSV file path not provided.")
+    sys.exit(1)
 
-input_file = input("Enter the path to the CSV file: ")
+csv_file_path = sys.argv[1]
+
+input_file = csv_file_path
 static_first_text = """
 <!DOCTYPE html>
     <html lang="en">
