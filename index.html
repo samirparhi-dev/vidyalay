@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card Generator</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+           padding: 0.5in;/* Center the container horizontally */
+        }
+
+        .card {
+            width: 4in;
+            height: 6in;
+            border: 2px solid #000;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+        p#rowDataLength {
+            text-align: center;
+        }
+
+        button#downloadButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color:darkslateblue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button#downloadButton:hover {
+            background-color: #4abef0;
+        }
+        .signature {
+            display: inline-block;
+            margin-right: 20px; /* Adjust this value to control the space between signatures */
+        }
+
+        .card-content {
+            writing-mode: vertical-rl;
+            text-align: center;
+            margin: auto;
+        }
+        .spaced-words {
+        writing-mode: vertical-rl;
+        word-spacing: 5px; /* Adjust this value as needed */
+    }
+    </style>
+</head>
+<body>
+<h1><center>Admit Card Generator</center></h1>
+<input type="file" accept=".csv" onchange="handleFileSelect(event)">
+<button id="downloadButton">Download Admit Cards</button>
+<p id="rowDataLength">No of Student Record in the File:</p>
+<div class="container"></div>
+<script>
+    function handleFileSelect(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const contents = e.target.result;
+            processData(contents);
+        };
+
+        reader.readAsText(file);
+    }
+
+    function processData(data) {
+        // Split CSV into rows
+        const rows = data.split('\n');
+        const headers = rows.shift().split(',');
+        // Parse CSV data
+        const rowData = [];
+        rows.forEach(row => {
+        const rowObj = {};
+        const rowDataArray = row.split(',');
+        headers.forEach((header, index) => {
+            rowObj[header] = rowDataArray[index];
+        });
+        rowData.push(rowObj);
+    });
+
+    displayData(rowData);
+    const rowDataLengthElement = document.getElementById('rowDataLength');
+
+    if (rowDataLengthElement) {
+            rowDataLengthElement.textContent = "No of Student Record in the File: " + rowData.length;
+        }
+    }
+
+    function displayData(rowData) {
+        const container = document.querySelector('.container');
+        rowData.forEach(rowObj => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            const content = `
+                <div class="card-content">
+                    <h3><center>Admit Card</center></h3>
+                    <p><center>Block Education office, Udala</center></p>
+                    <p><center>form no -04</center></p>
+                    <p><center>Scholarship Examination ${rowObj['year']} of class ${rowObj['Student Class']}<center>
+                    <p><center>Student ${rowObj['Student Name']} (${rowObj['gender']})(${rowObj['CATEGORY']}) of ${rowObj['School Name']} School.<br>
+                    <p>Roll No: ${rowObj['Roll No']} & Centre Name: ${rowObj['Centre Name']}.
+                    <br><left>Exam Date is on ${rowObj['Examination Date']} from ${rowObj['Exam Start Time']} to ${rowObj['Exam End Time']}<br></p>
+                    <br><br><p>&nbsp;&nbsp;&nbsp;Student&nbsp;&nbsp;&nbsp;BEO&nbsp;&nbsp;&nbsp;Headmaster/mistress</p>
+                </div>`;
+
+            card.innerHTML = content;
+            container.appendChild(card);
+        });
+    }
+</script>
+</body>
+</html>
