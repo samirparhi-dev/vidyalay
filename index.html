@@ -15,15 +15,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-           padding: 0.5in;/* Center the container horizontally */
         }
 
         .card {
-            width: 4in;
-            height: 6in;
-            border: 2px solid #000;
+            width: 3.8in;
+            height: 5in;
+            border: 1px solid #000;
             box-sizing: border-box;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
+            
             page-break-inside: avoid;
         }
 
@@ -44,7 +44,7 @@
         .card-content {
             writing-mode: vertical-rl;
             text-align: center;
-            margin: auto;
+           padding: auto;
         }
         .spaced-words {
         writing-mode: vertical-rl;
@@ -101,12 +101,12 @@
             const content = `
                 <div class="card-content">
                     <h3><center>Admit Card</center></h3>
-                    <p><center>Block Education office, Udala</center></p>
+                    <p><center><b>Block Education office, Udala</b></center></p>
                     <p><center>form no -04</center></p>
-                    <p><center>Scholarship Examination ${rowObj['year']} of class ${rowObj['Student Class']}<center>
-                    <p><center><b>${rowObj['Student Name']}</b> (${rowObj['gender']})(${rowObj['CATEGORY']}) of <b>${rowObj['School Name']}</b> School.<br>
-                    <p>Roll No: <b>${rowObj['Roll No']}</b> & Centre Name: <b>${rowObj['Centre Name']}</b>.
-                    <br><left>Exam Date is on <b>${rowObj['Examination Date']}</b> from <b>${rowObj['Exam Start Time']}</b> to $<b>{rowObj['Exam End Time']}</b><br></p>
+                    <p><center><b>Scholarship Examination ${rowObj['year']} of class ${rowObj['Student Class']}<center></b></p>
+                    <p><center><b>&nbsp;${rowObj['Student Name']}</b> (${rowObj['gender']})(${rowObj['CATEGORY']}) of School: <b>${rowObj['School Name']}.</b>
+                    <br><center>Roll No: <b>${rowObj['Roll No']}</b> and Centre Name: <b>${rowObj['Centre Name']}</b></center>.
+                    <br><center>Exam Date: <b>${rowObj['Examination Date']}</b> from <b>${rowObj['Exam Start Time']}</b> to <b>${rowObj['Exam End Time']}</b><br></p>
                     <br><br><p>&nbsp;&nbsp;&nbsp;Student&nbsp;&nbsp;&nbsp;BEO&nbsp;&nbsp;&nbsp;Headmaster/mistress</p>
                 </div>`;
 
