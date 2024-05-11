@@ -37,21 +37,6 @@
             text-align: center;
         }
 
-        button#downloadButton {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color:darkslateblue;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button#downloadButton:hover {
-            background-color: #4abef0;
-        }
         .signature {
             display: inline-block;
             margin-right: 20px; /* Adjust this value to control the space between signatures */
@@ -71,7 +56,6 @@
 <body>
 <h1><center>Admit Card Generator</center></h1>
 <input type="file" accept=".csv" onchange="handleFileSelect(event)">
-<button id="downloadButton">Download Admit Cards</button>
 <p id="rowDataLength">No of Student Record in the File:</p>
 <div class="container"></div>
 <script>
