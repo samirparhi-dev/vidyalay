@@ -7,10 +7,7 @@
     <style>
         @page {
         size: A4;
-        margin-left: 1px;
-        margin-right:1px;
-        margin-top: 2px;
-        margin-bottom: 2px;
+        margin: 2cm 2cm 2cm 2cm;
         }
 
         @media print {
@@ -31,18 +28,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding-left: 1px;
-            padding-right: 1px;
-            margin-left: -3px;
+            gap: 5px;
         }
 
         .card {
             width: 3.8in;
             height: 5in;
             border: 1px solid #000;
+            margin: 8px -20px;
             box-sizing: border-box;
-            padding-left: 1px;
-            padding-right: 1px;
             background-color: floralwhite;
             page-break-inside: avoid;
         }
@@ -64,7 +58,7 @@
         .card-content {
             writing-mode: vertical-rl;
             text-align: center;
-           padding: auto;
+           padding: 2px;
         }
         .spaced-words {
         writing-mode: vertical-rl;
