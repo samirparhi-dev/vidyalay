@@ -10,6 +10,14 @@
         margin: 0;
         }
 
+        @media print {
+        h1, /* Hide the header */
+        input[type="file"], /* Hide the file input */
+        p#rowDataLength { /* Hide the paragraph displaying the number of student records */
+            display: none !important;
+        }
+    }
+
         body {
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             margin: 0;
@@ -28,7 +36,6 @@
             height: 5in;
             border: 1px solid #000;
             box-sizing: border-box;
-            margin-bottom: 2px;
             padding: 2px;
             background-color: floralwhite;
             page-break-inside: avoid;
