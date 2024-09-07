@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .admit-card {
+            width: 48%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            box-sizing: border-box;
+            page-break-inside: avoid;
+        }
+        .admit-card h3 {
+            margin: 5px 0;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Admit Card Generator</h2>
+        <input type="file" id="csvFile" accept=".csv">
+        <button onclick="generateAdmitCards()">Generate Admit Cards</button>
+        <div id="admitCardsContainer"></div>
+        <button onclick="window.print()">Print Admit Cards</button>
+    </div>
+
+    <script>
+        function parseCSV(csvText) {
+            const lines = csvText.split("\n");
+            const headers = lines[0].split(",");
+            const data = lines.slice(1).map(line => {
+                const values = line.split(",");
+                let obj = {};
+                headers.forEach((header, index) => {
+                    obj[header.trim()] = values[index] ? values[index].trim() : '';
+                });
+                return obj;
+            });
+            return data;
+        }
+
+        function generateAdmitCards() {
+            const fileInput = document.getElementById('csvFile');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please upload a CSV file.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const csvData = e.target.result;
+                const data = parseCSV(csvData);
+                const container = document.getElementById('admitCardsContainer');
+                container.innerHTML = '';
+
+                data.forEach((student, index) => {
+                    const cardDiv = document.createElement('div');
+                    cardDiv.className = 'admit-card';
+                    cardDiv.innerHTML = `
+                        <h3>Admit Card</h3>
+                        <p><strong>Name:</strong> ${student['Name']}</p>
+                        <p><strong>Roll Number:</strong> ${student['Roll Number']}</p>
+                        <p><strong>Class:</strong> ${student['Class']}</p>
+                        <p><strong>Exam Center:</strong> ${student['Exam Center']}</p>
+                        <p><strong>Date:</strong> ${student['Date']}</p>
+                    `;
+
+                    container.appendChild(cardDiv);
+
+                    // Add page break after 4 cards
+                    if ((index + 1) % 4 === 0) {
+                        const pageBreak = document.createElement('div');
+                        pageBreak.className = 'page-break';
+                        container.appendChild(pageBreak);
+                    }
+                });
+            };
+
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>
