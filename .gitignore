@@ -5,3 +5,8 @@
 ./src/bin
 ./src/lib
 ./src/include
+./bin
+./include
+./lib
+./share
+pyenv.cfg
