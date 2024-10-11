@@ -1,0 +1,7 @@
+    <svg width="210mm" height="297mm" xmlns="http://www.w3.org/2000/svg">
+    {% for card in cards %}
+    <g transform="translate({{ card.x }}mm, {{ card.y }}mm)">
+        {{ card.svg }}
+    </g>
+    {% endfor %}
+    </svg>

@@ -25,7 +25,7 @@
 
   <!-- Scholarship Exam -->
   <text x="50%" y="110" text-anchor="middle" font-family="Gill Sans" font-size="18">
-    Scholarship Exam of Class V, 2024
+    Scholarship Exam of Class {{ studentClass }}, 2024
   </text>
 
   <!-- Student Information -->
@@ -34,7 +34,7 @@
   </text>
 
     <text x="100" y="148" font-family="Gill Sans" font-size="18">
-    Samir Ranjan Parhi
+    {{ studentName }}
   </text>
 
 
@@ -43,14 +43,14 @@
   </text>
 
       <text x="425" y="148" font-family="Gill Sans" font-size="18">
-    Male
+    {{ studentGender }}
   </text>
 
   <text x="35" y="179" font-family="Gill Sans" font-size="18" font-weight="bold">
     Roll No.:   
   </text>
     <text x="120" y="179" font-family="Gill Sans" font-size="18">
-    Abc123
+    {{ studentRoll_no }}
   </text>
 
   <!-- Exam Centre -->
@@ -58,7 +58,7 @@
     Exam Centre:
   </text>
   <text x="165" y="210" font-family="Gill Sans" font-size="18">
-    Mendhakhai Boston collage School
+    {{ studentCentre_name }}
   </text>
   <!-- Timing -->
   <text x="35" y="240" font-family="Gill Sans" font-size="18" font-weight="bold">
@@ -66,7 +66,7 @@
   </text>
 
     <text x="105" y="240" font-family="Gill Sans" font-size="18">
-    12:00 AM to 12:00 PM
+    {{ examStartTime }}to {{ examEndTime }}
   </text>
 
   <!-- School -->
@@ -74,7 +74,7 @@
     School:
   </text>
   <text x="109" y="270" font-family="Gill Sans" font-size="18">
-    Mendhakhai Boston collage School
+    {{ studentSchool_name }}
   </text>
   <!-- Footer Section -->
   <text x="35" y="370" font-family="Gill Sans" font-size="16" font-weight="bold">
