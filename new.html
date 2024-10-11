@@ -4,38 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admit Card Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            margin: 20px;
-        }
-        .admit-card {
-            width: 48%;
-            border: 1px solid black;
-            padding: 10px;
-            margin: 5px;
-            display: inline-block;
-            box-sizing: border-box;
-            page-break-inside: avoid;
-        }
-        .admit-card h3 {
-            margin: 5px 0;
-        }
-        .page-break {
-            page-break-before: always;
+        @media print {
+            .page-break {
+                break-before: page;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h2>Admit Card Generator</h2>
-        <input type="file" id="csvFile" accept=".csv">
-        <button onclick="generateAdmitCards()">Generate Admit Cards</button>
-        <div id="admitCardsContainer"></div>
-        <button onclick="window.print()">Print Admit Cards</button>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Admit Card Generator</h2>
+        <div class="text-center">
+            <input type="file" id="csvFile" accept=".csv" class="mb-4 p-2 border rounded">
+            <button onclick="generateAdmitCards()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Generate Admit Cards
+            </button>
+        </div>
+        <div id="admitCardsContainer" class="mt-6 grid grid-cols-2 gap-4"></div>
+        <div class="text-center mt-6">
+            <button onclick="window.print()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                Print Admit Cards
+            </button>
+        </div>
     </div>
 
     <script>
@@ -71,19 +63,19 @@
 
                 data.forEach((student, index) => {
                     const cardDiv = document.createElement('div');
-                    cardDiv.className = 'admit-card';
+                    cardDiv.className = 'bg-white shadow-lg p-6 border rounded-lg admit-card';
                     cardDiv.innerHTML = `
-                        <h3>Admit Card</h3>
-                        <p><strong>Name:</strong> ${student['Name']}</p>
-                        <p><strong>Roll Number:</strong> ${student['Roll Number']}</p>
-                        <p><strong>Class:</strong> ${student['Class']}</p>
-                        <p><strong>Exam Center:</strong> ${student['Exam Center']}</p>
-                        <p><strong>Date:</strong> ${student['Date']}</p>
+                        <h3 class="text-xl font-semibold mb-2 text-center">Admit Card</h3>
+                        <p class="text-sm mb-2"><strong>Name:</strong> ${student['Name']}</p>
+                        <p class="text-sm mb-2"><strong>Roll Number:</strong> ${student['Roll Number']}</p>
+                        <p class="text-sm mb-2"><strong>Class:</strong> ${student['Class']}</p>
+                        <p class="text-sm mb-2"><strong>Exam Center:</strong> ${student['Exam Center']}</p>
+                        <p class="text-sm"><strong>Date:</strong> ${student['Date']}</p>
                     `;
 
                     container.appendChild(cardDiv);
 
-                    // Add page break after 4 cards
+                    // Add page break after every 4 cards
                     if ((index + 1) % 4 === 0) {
                         const pageBreak = document.createElement('div');
                         pageBreak.className = 'page-break';
