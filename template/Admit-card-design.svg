@@ -1,0 +1,93 @@
+<svg width="563" height="413" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Embed Google Font using @import -->
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600&display=swap');
+    text {
+      font-family: 'Jura', sans-serif;
+    }
+  </style>
+
+  <!-- Outer Border -->
+  <rect x="1" y="1" width="550" height="388" rx="10" ry="10" stroke="crimson" fill="none" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="50%" y="40" text-anchor="middle" font-family="Jura" font-size="24" text-decoration="underline"  font-weight="bold">
+    Admit Card
+  </text>
+
+  <!-- Form Number -->
+  <text x="450" y="40" font-family="Jura" font-size="14">
+    form no: 04
+  </text>
+
+  <!-- Block Education -->
+  <text x="50%" y="77" text-anchor="middle" font-family="Jura" font-size="18">
+    Block Education Office, Udala
+  </text>
+
+  <!-- Scholarship Exam -->
+  <text x="50%" y="110" text-anchor="middle" font-family="Jura" font-size="18">
+    Scholarship Exam of Class V, 2024
+  </text>
+
+  <!-- Student Information -->
+  <text x="35" y="148" font-family="Jura" font-size="18" font-weight="bold">
+    Name:
+  </text>
+
+    <text x="100" y="148" font-family="Jura" font-size="18">
+    Samir Ranjan Parhi
+  </text>
+
+
+    <text x="350" y="148" font-family="Jura" font-size="18" font-weight="bold">
+    Gender:
+  </text>
+
+      <text x="425" y="148" font-family="Jura" font-size="18">
+    Male
+  </text>
+
+  <text x="35" y="179" font-family="Jura" font-size="18" font-weight="bold">
+    Roll No.:   
+  </text>
+    <text x="115" y="179" font-family="Jura" font-size="18">
+    Abc123
+  </text>
+
+  <!-- Exam Centre -->
+  <text x="35" y="210" font-family="Jura" font-size="18" font-weight="bold">
+    Exam Centre:
+  </text>
+  <text x="160" y="210" font-family="Jura" font-size="18">
+    Mendhakhai Boston collage School
+  </text>
+  <!-- Timing -->
+  <text x="35" y="240" font-family="Jura" font-size="18" font-weight="bold">
+    Timing:
+  </text>
+
+    <text x="105" y="240" font-family="Jura" font-size="18">
+    12:00 AM to 12:00 PM
+  </text>
+
+  <!-- School -->
+  <text x="35" y="270" font-family="Jura" font-size="18" font-weight="bold">
+    School:
+  </text>
+  <text x="109" y="270" font-family="Jura" font-size="18">
+    Mendhakhai Boston collage School
+  </text>
+  <!-- Footer Section -->
+  <text x="35" y="370" font-family="Jura" font-size="16" font-weight="bold">
+    Student
+  </text>
+
+  <text x="190" y="370" font-family="Jura" font-size="16" font-weight="bold">
+    Headmaster
+  </text>
+
+  <text x="350" y="370" font-family="Jura" font-size="16" font-weight="bold">
+    Block Education Officer
+  </text>
+</svg>
