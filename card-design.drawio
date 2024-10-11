@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram id="oSsE7jD0XuVr-GH5DW_R" name="Page-2">
+    <mxGraphModel dx="661" dy="782" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="563" pageHeight="413" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-1" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="565" y="3" width="560" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-2" value="&lt;font size=&quot;1&quot;&gt;&lt;span style=&quot;font-size: 26px;&quot;&gt;&lt;u style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;Admit Card&lt;/b&gt;&lt;/u&gt;&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="765" y="6" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-5" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Block Education Office, Udala&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="678" y="47" width="334" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-6" value="&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;form no:&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="995" y="10" width="67" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-7" value="&lt;font&gt;&lt;span style=&quot;font-size: 22px;&quot;&gt;Scholarship Exam of Class V , 2024&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="640" y="82" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-8" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Name:&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="579" y="133" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-10" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Samir Ranjan Parhi&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="649" y="133" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-11" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Roll No.&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="924.5" y="135" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-12" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Abc01946&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="1026.5" y="135" width="88" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-13" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;School:&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="578" y="244" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-14" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;Mendhakhai Boston collage School&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="725" y="169" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-15" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Exam Centre:&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="578" y="169" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-16" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Timing:&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="579" y="205" width="86" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-18" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;Mendhakhai Boston collage School&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="658" y="244" width="416" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-19" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;12:00&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="665" y="205" width="57" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-20" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;12:00&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="796" y="205" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-21" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;&lt;b&gt;to&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="760" y="205" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-22" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-size: 0px; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bfont%20face%3D%26quot%3BVerdana%26quot%3B%26gt%3B%26lt%3Bspan%20style%3D%26quot%3Bfont-size%3A%2017px%3B%26quot%3B%26gt%3BMendhakhai%20Boston%20collage%20School%26lt%3B%2Fspan%26gt%3B%26lt%3B%2Ffont%26gt%3B%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dleft%3BverticalAlign%3Dmiddle%3BwhiteSpace%3Dwrap%3Brounded%3D0%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22104%22%20y%3D%22220%22%20width%3D%22450%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="660" y="280" width="450" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-23" value="&lt;font style=&quot;&quot; size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Student&#39;s Sign&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="578" y="360" width="136" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-24" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Headmaster&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="770" y="358" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-25" value="&lt;font style=&quot;&quot; size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;Block Education Officer&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="932" y="358" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-28" value="&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;04&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="1062" y="10" width="58" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-29" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;AM&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="725" y="205" width="32" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-30" value="&lt;font&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;PM&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="852" y="205" width="32" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZvhQKH6PwrXlT9Kr6YIV-33" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;(M)&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Jura;" parent="1" vertex="1">
+          <mxGeometry x="875.5" y="133" width="49" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
