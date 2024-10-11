@@ -1,1 +1,7 @@
 /target
+.venv
+.env
+.DS_Store
+./src/bin
+./src/lib
+./src/include

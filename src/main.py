@@ -29,7 +29,7 @@ if __name__ == "__main__":
     admit_card_svg_template = get_svg_template()
     
     # A4 size SVG 
-    a4_svg_template = get_svg_template("/template/a4-design.svg")
+    a4_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/a4-design.svg")
 
     #Csv file read    
     data = read_data_from_csv(csv_file_path)

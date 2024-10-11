@@ -1,91 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admit Card Generator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @media print {
-            .page-break {
-                break-before: page;
-            }
-        }
-    </style>
-</head>
-<body class="bg-gray-100">
-    <div class="container mx-auto p-6">
-        <h2 class="text-3xl font-bold text-center mb-6">Admit Card Generator</h2>
-        <div class="text-center">
-            <input type="file" id="csvFile" accept=".csv" class="mb-4 p-2 border rounded">
-            <button onclick="generateAdmitCards()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                Generate Admit Cards
-            </button>
-        </div>
-        <div id="admitCardsContainer" class="mt-6 grid grid-cols-2 gap-4"></div>
-        <div class="text-center mt-6">
-            <button onclick="window.print()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-                Print Admit Cards
-            </button>
-        </div>
-    </div>
-
-    <script>
-        function parseCSV(csvText) {
-            const lines = csvText.split("\n");
-            const headers = lines[0].split(",");
-            const data = lines.slice(1).map(line => {
-                const values = line.split(",");
-                let obj = {};
-                headers.forEach((header, index) => {
-                    obj[header.trim()] = values[index] ? values[index].trim() : '';
-                });
-                return obj;
-            });
-            return data;
-        }
-
-        function generateAdmitCards() {
-            const fileInput = document.getElementById('csvFile');
-            const file = fileInput.files[0];
-
-            if (!file) {
-                alert("Please upload a CSV file.");
-                return;
-            }
-
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const csvData = e.target.result;
-                const data = parseCSV(csvData);
-                const container = document.getElementById('admitCardsContainer');
-                container.innerHTML = '';
-
-                data.forEach((student, index) => {
-                    const cardDiv = document.createElement('div');
-                    cardDiv.className = 'bg-white shadow-lg p-6 border rounded-lg admit-card';
-                    cardDiv.innerHTML = `
-                        <h3 class="text-xl font-semibold mb-2 text-center">Admit Card</h3>
-                        <p class="text-sm mb-2"><strong>Name:</strong> ${student['Name']}</p>
-                        <p class="text-sm mb-2"><strong>Roll Number:</strong> ${student['Roll Number']}</p>
-                        <p class="text-sm mb-2"><strong>Class:</strong> ${student['Class']}</p>
-                        <p class="text-sm mb-2"><strong>Exam Center:</strong> ${student['Exam Center']}</p>
-                        <p class="text-sm"><strong>Date:</strong> ${student['Date']}</p>
-                    `;
-
-                    container.appendChild(cardDiv);
-
-                    // Add page break after every 4 cards
-                    if ((index + 1) % 4 === 0) {
-                        const pageBreak = document.createElement('div');
-                        pageBreak.className = 'page-break';
-                        container.appendChild(pageBreak);
-                    }
-                });
-            };
-
-            reader.readAsText(file);
-        }
-    </script>
-</body>
-</html>
+Student Name,Class,School Name,Gender,Exam Start Time,Exam End Time,Roll No,Centre Name
+Devidutta Tripathy,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 053,Govt High School Adapal
+Sneha Parida,V,GOVT UPS MENDHAKHARI,GIRL,12:00 AM,1:00 PM,MBJ UP 054,Govt Ps Ambachina Rehab
+Avinash Kumar,V,Govt Ups Julia,BOY,10:00 AM,12:00 PM,MBJ UP 055,Govt Ups Chhiluaposi
+Priya Patel,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 056,Govt High School Adapal
+Rahul Sharma,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 057,Govt High School Adapal
+Anjali Singh,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 058,Govt High School Adapal
+Vikram Rao,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 059,Govt High School Adapal
+Meera Gupta,V,GOVT UPS MENDHAKHARI,GIRL,10:00 AM,12:00 PM,MBJ UP 060,Govt High School Adapal
+Narendra Reddy,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 061,Govt High School Adapal
+Ritu Verma,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 062,Govt High School Adapal
+Prashant Mishra,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 063,Govt High School Adapal
+Neha Patil,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 064,Govt High School Adapal
+Amit Kumar,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 065,Govt High School Adapal
+Reena Sharma,V,GOVT UPS MENDHAKHARI,GIRL,10:00 AM,12:00 PM,MBJ UP 066,Govt High School Adapal
+Aditya Singh,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 067,Govt High School Adapal
+Priyanka Rao,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 068,Govt High School Adapal
+Karan Reddy,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 069,Govt High School Adapal
+Pooja Verma,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 070,Govt High School Adapal
+Mohan Mishra,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 071,Govt High School Adapal
+Neha Patil,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 072,Govt High School Adapal
+Amit Kumar,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 073,Govt High School Adapal
+Reena Sharma,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 074,Govt High School Adapal
+Aditya Singh,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 075,Govt High School Adapal
+Priyanka Rao,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 076,Govt High School Adapal
+Karan Reddy,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 077,Govt High School Adapal
+Pooja Verma,V,Govt Ps Nuasahi,GIRL,10:00 AM,12:00 PM,MBJ UP 078,Govt High School Adapal
+Mohan Mishra,V,Govt Ps Nuasahi,BOY,10:00 AM,12:00 PM,MBJ UP 079,Govt High School Adapal

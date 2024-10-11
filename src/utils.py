@@ -1,6 +1,6 @@
 from jinja2 import Template
-import csv
 import os
+import pandas as pd
 # Function to generate SVG card with dynamic data
 def create_card(class_name, student_name, student_roll_no, exam_centre_name, school_name, student_gender, exam_start_time, exam_end_time, svg_template):
     return svg_template.render(
@@ -13,11 +13,9 @@ def create_card(class_name, student_name, student_roll_no, exam_centre_name, sch
         examStartTime=exam_start_time,
         examEndTime=exam_end_time
     )
-def read_data_from_csv(csv_file_path):
-    with open(csv_file_path, 'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        return [row for row in reader]
-
+def read_data_from_csv_pandas(csv_file_path):
+    df = pd.read_csv(csv_file_path)
+    return df.to_dict('records')
 
 def get_svg_template(default_path="/template/admit-card-design.svg"):
     # Ask the user for the SVG file path
