@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # Paths
     csv_file_path = input('Where is your Csv file?')
     if not csv_file_path:
-        csv_file_path = "default.csv"
+        csv_file_path = "C:\\Users\\tknan\\Code\\vidyalay\\default.csv"
     print(f"CSV file path: {csv_file_path}")
 
     output_pdf_path =  input('Where you want to save output file?')
@@ -26,10 +26,10 @@ if __name__ == "__main__":
         output_pdf_path = "default.pdf"
         print(f"Output PDF path: {output_pdf_path}")
 
-    admit_card_svg_template = get_svg_template()
+    admit_card_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\admit-card-design.svg")
     
     # A4 size SVG 
-    a4_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/a4-design.svg")
+    a4_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\a4-design.svg")
 
     #Csv file read    
     data = read_data_from_csv(csv_file_path)
@@ -47,6 +47,7 @@ if __name__ == "__main__":
                         row['Gender'],
                         row['Exam Start Time'],
                         row['Exam End Time'],
+                        row['Date'],
                         a4_svg_template
                     )
 
