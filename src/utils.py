@@ -2,7 +2,7 @@ from jinja2 import Template
 import os
 import pandas as pd
 # Function to generate SVG card with dynamic data
-def create_card(class_name, student_name, student_roll_no, exam_centre_name, school_name, student_gender, exam_start_time, exam_end_time, svg_template):
+def create_card(class_name, student_name, student_roll_no, exam_centre_name, school_name, student_gender, exam_start_time, exam_end_time, exam_date, svg_template):
     return svg_template.render(
         studentClass=class_name,
         studentName=student_name,
@@ -11,9 +11,10 @@ def create_card(class_name, student_name, student_roll_no, exam_centre_name, sch
         studentSchool_name=school_name,
         studentGender=student_gender,
         examStartTime=exam_start_time,
-        examEndTime=exam_end_time
+        examEndTime=exam_end_time,
+        examDate=exam_date
     )
-def read_data_from_csv_pandas(csv_file_path):
+def read_data_from_csv(csv_file_path):
     df = pd.read_csv(csv_file_path)
     return df.to_dict('records')
 
