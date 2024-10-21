@@ -18,18 +18,18 @@ if __name__ == "__main__":
     # Paths
     csv_file_path = input('Where is your Csv file?')
     if not csv_file_path:
-        csv_file_path = "C:\\Users\\tknan\\Code\\vidyalay\\default.csv"
+        csv_file_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/default.csv"
     print(f"CSV file path: {csv_file_path}")
 
     output_pdf_path =  input('Where you want to save output file?')
     if not output_pdf_path:
-        output_pdf_path = "default.pdf"
+        output_pdf_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/test/test.pdf"
         print(f"Output PDF path: {output_pdf_path}")
 
-    admit_card_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\admit-card-design.svg")
+    admit_card_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/admit-card-design.svg")
     
     # A4 size SVG 
-    a4_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\a4-design.svg")
+    a4_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/a4-design.svg")
 
     #Csv file read    
     data = read_data_from_csv(csv_file_path)
@@ -38,9 +38,12 @@ if __name__ == "__main__":
     svg_files = []
 
     for i, row in enumerate(data):
+        # print(row)
+        # print(row.keys())
         card_svg = create_card(
-                        row['Student Name'],
+                        
                         row['Class'],
+                        row['Student Name'],
                         row['Roll No'],
                         row['Centre Name'],
                         row['School Name'],
@@ -48,10 +51,11 @@ if __name__ == "__main__":
                         row['Exam Start Time'],
                         row['Exam End Time'],
                         row['Date'],
-                        a4_svg_template
+                        row['Caste'],
+                        admit_card_svg_template
                     )
-
-        output_svg_file = f'card_{i}.svg'
+        admit_card_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/test/admitCard"
+        output_svg_file =os.path.join(admit_card_path, f'card_{i}.svg')
         save_svg(card_svg, output_svg_file)
         svg_files.append(output_svg_file)
 

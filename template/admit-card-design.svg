@@ -39,13 +39,13 @@
 
     
 
-      <text x="325" y="120" font-family="Gill Sans" font-size="18">
-    {{ Gender }}
+      <text x="360" y="120" font-family="Gill Sans" font-size="18">
+    {{ student_Gender }}
   </text>
 
 
-    <text x="400" y="120" font-family="Gill Sans" font-size="18">
-    {{ caste }}
+    <text x="450" y="120" font-family="Gill Sans" font-size="18">
+    {{ student_caste }}
   </text>
 <!-- School -->
   <text x="35" y="150" font-family="Gill Sans" font-size="18" font-weight="bold">
@@ -62,37 +62,37 @@
   </text>
 
   <!-- Exam Centre -->
-  <text x="250" y="180" font-family="Gill Sans" font-size="18" font-weight="bold">
+  <text x="35" y="210" font-family="Gill Sans" font-size="18" font-weight="bold">
     Exam Centre:
   </text>
-  <text x="350" y="180" font-family="Gill Sans" font-size="18">
+  <text x="165" y="210" font-family="Gill Sans" font-size="18">
     {{ studentCentre_name }}
   </text>
   <!-- Date -->
-  <text x="35" y="210" font-family="Gill Sans" font-size="18" font-weight="bold">
+  <text x="35" y="240" font-family="Gill Sans" font-size="18" font-weight="bold">
     Exam Date:
   </text>
-<text x="125" y="210" font-family="Gill Sans" font-size="18">
+<text x="150" y="240" font-family="Gill Sans" font-size="18">
     {{ examDate }}
   </text>
-  <text x="230" y="210" font-family="Gill Sans" font-size="18" font-weight="bold">
+  <text x="270" y="240" font-family="Gill Sans" font-size="18" font-weight="bold">
     Time
   </text>
-    <text x="270" y="210" font-family="Gill Sans" font-size="18"> 
-    {{ examStartTime }}to {{ examEndTime }}
+    <text x="320" y="240" font-family="Gill Sans" font-size="18"> 
+    {{ examStartTime }} to {{ examEndTime }}
   </text>
 
   
   <!-- Footer Section -->
-  <text x="50%" y="290" font-family="Gill Sans" font-size="16" font-weight="bold">
+  <text x="200" y="320" font-family="Gill Sans" font-size="16" font-weight="bold">
     Student's Sign
   </text>
 
-  <text x="35" y="350" font-family="Gill Sans" font-size="16" font-weight="bold">
+  <text x="35" y="370" font-family="Gill Sans" font-size="16" font-weight="bold">
     Headmaster's Sign
   </text>
 
-  <text x="350" y="350" font-family="Gill Sans" font-size="16" font-weight="bold">
+  <text x="350" y="370" font-family="Gill Sans" font-size="16" font-weight="bold">
     Block Education Officer
   </text>
 </svg>

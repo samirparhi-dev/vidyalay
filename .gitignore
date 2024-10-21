@@ -10,3 +10,4 @@
 ./lib
 ./share
 pyenv.cfg
+.src/__pycache__
