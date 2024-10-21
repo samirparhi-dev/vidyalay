@@ -1,4 +1,4 @@
-<svg width="552" height="392" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg transform="rotate(90)" width="560" height="590" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Embed Google Font using @import -->
 
 <style>
@@ -6,7 +6,7 @@
 </style>
 
   <!-- Outer Border -->
-  <rect x="1" y="1" width="550" height="390" rx="10" ry="10" stroke="crimson" fill="#ebedf0" stroke-width="2"/>
+  <rect x="1" y="1" width="555" height="400" rx="10" ry="10" stroke="crimson" fill="#ebedf0" stroke-width="2"/>
   
   <!-- Title -->
   <text x="50%" y="30" text-anchor="middle" font-family="Gill Sans" font-size="24" text-decoration="underline"  font-weight="bold">
