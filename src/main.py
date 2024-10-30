@@ -2,6 +2,7 @@ from jinja2 import Template
 import os
 from reportlab.graphics import renderPDF
 from reportlab.pdfgen import canvas
+from datetime import datetime
 
 # Import the function from utils.py
 from utils import create_card, read_data_from_csv, get_svg_template
@@ -17,25 +18,25 @@ def save_svg(content, output_file):
 if __name__ == "__main__":
     # Paths
     csv_file_path = input('Where is your Csv file?')
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    ###For Windows#####
+    
+    admit_card_path = "C:\\Users\\tknan\\Desktop\\tk\\admitCard\\"
+    admit_card_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\admit-card-design.svg")
+    csv_file_path = "C:\\Users\\tknan\\Desktop\\tk\\default.csv"
+    
+    
+    ######For MacOS#####
+    
+    # admit_card_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/test/admitCard"
+    # admit_card_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/admit-card-design.svg")
+    # csv_file_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/default.csv"
+    
     if not csv_file_path:
-        # csv_file_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/default.csv"
-        csv_file_path = "C:\\Users\\tknan\\Desktop\\tk\\default.csv"
-    print(f"CSV file path: {csv_file_path}")
-
+        print(f"CSV file path: {csv_file_path}")
     output_pdf_path =  input('Where you want to save output file?')
     if not output_pdf_path:
-        # output_pdf_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/test/test.pdf"
-        output_pdf_path = "C:\\Users\\tknan\\Desktop\\tk\\test.pdf"
         print(f"Output PDF path: {output_pdf_path}")
-
-
-
-    # admit_card_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/admit-card-design.svg")
-    admit_card_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\admit-card-design.svg")
-    # A4 size SVG 
-
-    # a4_svg_template = get_svg_template("/Users/samirparhi-dev/codeSpace/personal/vidyalay/template/a4-design.svg")
-    a4_svg_template = get_svg_template("C:\\Users\\tknan\\Code\\vidyalay\\template\\a4-design.svg")
     #Csv file read    
     data = read_data_from_csv(csv_file_path)
 
@@ -59,13 +60,15 @@ if __name__ == "__main__":
                         row['Caste'],
                         admit_card_svg_template
                     )
-        # admit_card_path = "/Users/samirparhi-dev/codeSpace/personal/vidyalay/test/admitCard"
-        admit_card_path = "C:\\Users\\tknan\\Desktop\\tk"
-        output_svg_file =os.path.join(admit_card_path, f'card_{i}.svg')
+        student_name = "".join(c for c in row['Student Name'] if c.isalnum() or c in (' ', '-', '_')).replace(" ", "_")
+
+        # Save SVG to file
+        output_svg_file = os.path.join(admit_card_path, f'{student_name}_Admit_card.svg')
+        # Save the SVG file
         save_svg(card_svg, output_svg_file)
+    
+        # Append the SVG file path to the list
         svg_files.append(output_svg_file)
 
     # Generate the PDF from the SVG files
-    generate_pdf_from_svgs(output_pdf_path, svg_files)
-
-    
+    generate_pdf_from_svgs(svg_files)
