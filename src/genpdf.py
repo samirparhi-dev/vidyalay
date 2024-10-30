@@ -14,7 +14,7 @@ def generate_pdf_from_svgs(svg_files):
     width, height = 841.89, 595.28
     gap = 2.83465
     
-    card_width = (width - 3 * gap) / 3  # 3 columns with gaps between and around
+    card_width = (width - 3 * gap) / 2  # 2 columns with gaps between and around
     card_height = (height - 3 * gap) / 2  # 2 rows with gaps between and around
 
     cards_per_page = 4  # 4 cards per page (3 columns x 2 rows)
