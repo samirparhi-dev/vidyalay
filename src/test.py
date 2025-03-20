@@ -51,13 +51,13 @@ if __name__ == "__main__":
                         row['Class'],
                         row['Student Name'],
                         row['Roll No'],
-                        row['Centre Name'],
-                        row['School Name'],
-                        row['Gender'],
-                        row['Exam Start Time'],
-                        row['Exam End Time'],
-                        row['Date'],
-                        row['Caste'],
+                        
+                         row['School Name'],
+                        row['Parent'],
+                        row['contact no'],
+                        
+                        
+                        
                         admit_card_svg_template
                     )
         student_name = "".join(c for c in row['Student Name'] if c.isalnum() or c in (' ', '-', '_')).replace(" ", "_")

@@ -26,16 +26,16 @@ def generate_pdf_from_svgs(svg_files):
     gap = 2.83465
     
     card_width = (width - 3 * gap) / 2  # 2 columns with gaps between and around
-    card_height = (height - 3 * gap) / 2  # 2 rows with gaps between and around
+    card_height = (height - 3 * gap) / 4 # 4 rows with gaps between and around
 
-    cards_per_page = 4  # 4 cards per page (3 columns x 2 rows)
+    cards_per_page = 8  # 8 cards per page (2 columns x 4 rows)
 
-    # Calculate x and y positions for the 2 columns and 2 rows
+    # Calculate x and y positions for the 2 columns and 4 rows
     x_positions = [gap, gap + card_width + gap]  # 2 columns
-    y_positions = [height - gap - card_height, height - 2 * gap - 2 * card_height]  # 2 rows
+    y_positions = [height - gap - card_height, height - 2 * gap - 2 * card_height]  # 4 rows
 
     for i, svg_file in enumerate(svg_files):
-        # Add a new page after every 6 cards
+        # Add a new page after every 8 cards
         if i % cards_per_page == 0 and i > 0:
             c.showPage()
 

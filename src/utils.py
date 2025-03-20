@@ -17,13 +17,11 @@ def create_card(class_name, student_name, student_roll_no, exam_centre_name, sch
         studentClass=class_name,
         studentName=student_name,
         studentRoll_no=student_roll_no,
-        studentCentre_name=exam_centre_name,
+        parent=parent,
         studentSchool_name=school_name,
-        student_Gender=student_gender,
-        examStartTime=exam_start_time,
-        examEndTime=exam_end_time,
-        examDate=exam_date,
-        student_caste=student_caste,
+        ContactNo=ContactNo,
+        
+        
         img=image_base64
     )
 
