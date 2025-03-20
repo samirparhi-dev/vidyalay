@@ -1,99 +1,83 @@
 <svg transform="rotate(90)" width="280" height="190" xmlns="http://www.w3.org/1500/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Embed Google Font using @import -->
-
-<style>
+  <style>
     @keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,Jura,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#fbf9f9}h1,h2,h3{margin:8px 0 2px;padding:0;color:#0366d6}h1{font-size:15px;font-weight:700}h2,h3{font-weight:400}h1 svg,h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3{font-size:14px}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.row{display:flex;flex-wrap:wrap}.row section{flex:1 1 0}.avatar{border-radius:50%;margin:0 6px}.calendar.field{margin:4px 0 4px 7px}.calendar .day{outline:1px solid rgba(27,31,15,.04);outline-offset:-1px}svg.calendar{margin-left:13px;margin-top:4px}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,15,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,15,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,15,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,15,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,15,0.06)}#metrics-end{width:100%}
-</style>
+  </style>
 
   <!-- Outer Border -->
-  <rect x="1" y="1" width="278" height="180" rx="10" ry="10" stroke="crimson" fill="none" stroke-width="1"/>
+  <rect x="1" y="1" width="200" height="135" rx="10" ry="10" stroke="crimson" fill="none" stroke-width="1"/>
   
   <!-- Title -->
-  <text x="50%" y="15" text-anchor="middle" font-family="Gill Sans" text-decoration="underline"  font-weight="bold">
-    Admit Card
+  <text x="35%" y="15" text-anchor="middle" font-family="Gill Sans" text-decoration="underline" font-weight="bold">
+    Identity Card(Excursion)
   </text>
 
   <!-- Form Number -->
   <text x="240" y="30" font-family="Helvetica" font-size="7">
-    
   </text>
 
   <!-- Block Education -->
-  <text x="40%" y="35" text-anchor="middle" font-family="Gill Sans" font-size="10">
+  <text x="35%" y="29" text-anchor="middle" font-family="Gill Sans" font-size="10">
     Block Education Office, Udala
   </text>
 
-  <!-- Scholarship Exam -->
-  <text x="40%" y="45" text-anchor="middle" font-family="Gill Sans" font-size="10">
-    Scholarship Exam of Class {{ studentClass }}, 2024
-  </text>
+  
 
   <!-- Student Information -->
-  <text x="15" y="72" font-family="Gill Sans" font-size="9" font-weight="bold">
+  <text x="15" y="42" font-family="Gill Sans" font-size="9" font-weight="bold">
     Name:
   </text>
 
-    <text x="48" y="72" font-family="Gill Sans" font-size="9">
+  <text x="48" y="42" font-family="Gill Sans" font-size="9">
     {{ studentName }}
   </text>
 
-    <text x="175" y="72" font-family="Gill Sans" font-size="9">
-    {{ student_Gender }}
-  </text>
+ 
 
+  
 
-    <text x="215" y="72" font-family="Gill Sans" font-size="9">
-    {{ student_caste }}
-  </text>
-<!-- School -->
-  <text x="15" y="84" font-family="Gill Sans" font-size="9" font-weight="bold">
+  <!-- School -->
+  <text x="15" y="52" font-family="Gill Sans" font-size="9" font-weight="bold">
     School:
   </text>
-  <text x="55" y="84" font-family="Gill Sans" font-size="9">
+  <text x="55" y="52" font-family="Gill Sans" font-size="9">
     {{ studentSchool_name }}
   </text>
-  <text x="15" y="95" font-family="Gill Sans" font-size="9" font-weight="bold">
-    Roll No.:   
+
+  <text x="15" y="65" font-family="Gill Sans" font-size="9" font-weight="bold">
+    Roll No.:
   </text>
-    <text x="60" y="95" font-family="Gill Sans" font-size="9">
+  <text x="60" y="65" font-family="Gill Sans" font-size="9">
     {{ studentRoll_no }}
   </text>
 
-  <!-- Exam Centre -->
-  <text x="15" y="106" font-family="Gill Sans" font-size="9" font-weight="bold">
-    Exam Centre:
+  <!-- Class -->
+  <text x="15" y="76" font-family="Gill Sans" font-size="9" font-weight="bold">
+    Class:
   </text>
-  <text x="80" y="106" font-family="Gill Sans" font-size="9">
-    {{ studentCentre_name }}
+  <text x="60" y="76" font-family="Gill Sans" font-size="9">
+    {{ studentclass_name }}
   </text>
-  <!-- Date -->
-  <text x="15" y="118" font-family="Gill Sans" font-size="9" font-weight="bold">
-    Exam Date:
+
+  <!-- parent -->
+  <text x="15" y="88" font-family="Gill Sans" font-size="9" font-weight="bold">
+    parent:
   </text>
-<text x="70" y="118" font-family="Gill Sans" font-size="9">
-    {{ examDate }}
+  <text x="60" y="88" font-family="Gill Sans" font-size="9">
+    {{ parent }}
   </text>
-  <text x="130" y="118" font-family="Gill Sans" font-size="9" font-weight="bold">
-    Time:
+  
+  <text x="15" y="103" font-family="Gill Sans" font-size="9" font-weight="bold">
+    Contact No:
   </text>
-    <text x="160" y="118" font-family="Gill Sans" font-size="9"> 
-    {{ examStartTime }} to {{ examEndTime }}
+  <text x="60" y="103" font-family="Gill Sans" font-size="9">
+    {{ Contact No}} 
   </text>
 
   
-  <!-- Footer Section -->
-  <text x="110" y="145" font-family="Gill Sans" font-size="9" font-weight="bold">
-    Student's Sign
-  </text>
 
-  <text x="15" y="160" font-family="Gill Sans" font-size="9" font-weight="bold">
-    Headmaster's Sign
-  </text>
-
-  <text x="170" y="160" font-family="Gill Sans" font-size="9" font-weight="bold">
+  <text x="90" y="130" font-family="Gill Sans" font-size="9" font-weight="bold">
     Block Education Officer
   </text>
-  
-  <!-- Student Photo -->
-<image x="215" y="15" width="50" height="50" xlink:href="data:image/jpeg;base64,{{ img }}"/>
-</svg>
+
+  <
