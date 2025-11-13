@@ -47,9 +47,10 @@ def add_id_card(pdf, x, y, student):
     pdf.set_text_color(0, 0, 0)
     pdf.multi_cell(CARD_WIDTH - 10, 5,
                    f"Name: {student['NAME OF THE STUDENT']}\n"
-                   f"Class: {student['CLASS']}\n"
+                   # f"Class: {student['CLASS']}\n"
+                   f"Designation:\n"
                    f"Gender: {student['GENDER']}\n"
-                   f"Father: {student['NAME OF THE FATHER']}\n"
+                   # f"Parent: {student['NAME OF THE FATHER']}\n"
                    f"School: {student['NAME OF THE SCHOOL']}\n"
                    f"Cluster: {student['NAME OF THE CLUSTER']}\n"
                    f"Contact: {student['CONTACT NUMBER']}\n"
